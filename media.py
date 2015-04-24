@@ -36,5 +36,5 @@ class Music(Entertain, object):
 
 	def __cmp__(self, other):
 		if hasattr(other, 'getKey'):
-			return ord(self.getKey()[0]).__cmp__(ord(other.getKey()[0]))
+			return self.getKey().__cmp__(other.getKey())
 

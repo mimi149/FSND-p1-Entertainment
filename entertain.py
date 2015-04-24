@@ -5,51 +5,90 @@ import media
 
 Jaws = media.Movie("Jaws", "https://www.youtube.com/watch?v=3hIvvho2T1k",
 							"2h 10m",
-							"When a young woman is killed by a shark while skinny-dipping near the New England tourist town of Amity Island, police chief Martin Brody (Roy Scheider) wants to close the beaches, but mayor Larry Vaughn (Murray Hamilton) overrules him, fearing that the loss of tourist revenue will cripple the town. Ichthyologist Matt Hooper (Richard Dreyfuss) and grizzled ship captain Quint (Robert Shaw) offer to help Brody capture the killer beast, and the trio engage in an epic battle of man vs. nature.",
+							"When a young woman is killed by a shark while skinny-dipping near the New England \
+                            tourist town of Amity Island, police chief Martin Brody (Roy Scheider) wants to close \
+                            the beaches, but mayor Larry Vaughn (Murray Hamilton) overrules him, fearing that the \
+                            loss of tourist revenue will cripple the town. Ichthyologist Matt Hooper (Richard Dreyfuss) \
+                            and grizzled ship captain Quint (Robert Shaw) offer to help Brody capture the killer beast, \
+                            and the trio engage in an epic battle of man vs. nature.",
 							"image/jaws.jpg",
 							"Roy Scheider","Steven Spielberg","June 1, 1975 (USA)")
 Saving_private_Ryan = media.Movie("Saving private Ryan", "https://www.youtube.com/watch?v=RYExstiQlLc",
 							"2h 50m",
-							"Captain John Miller (Tom Hanks) takes his men behind enemy lines to find Private James Ryan, whose three brothers have been killed in combat. Surrounded by the brutal realties of war, while searching for Ryan, each man embarks upon a personal journey and discovers their own strength to triumph over an uncertain future with honor, decency and courage",
+							"Captain John Miller (Tom Hanks) takes his men behind enemy lines to find Private James Ryan, \
+                            whose three brothers have been killed in combat. Surrounded by the brutal realties of war, \
+                            while searching for Ryan, each man embarks upon a personal journey and discovers their \
+                            own strength to triumph over an uncertain future with honor, decency and courage",
 							"image/savi.jpg",
 							"Tom Hanks","Steven Spielberg","July 24, 1998 (USA)")
 Jurassic_Park = media.Movie("Jurassic Park", "https://www.youtube.com/watch?v=RxrvaneULkE",
 							"2h 7m",
-							"In Steven Spielberg's massive blockbuster, paleontologists Alan Grant (Sam Neill) and Ellie Sattler (Laura Dern) and mathematician Ian Malcolm (Jeff Goldblum) are among a select group chosen to tour an island theme park populated by dinosaurs created from prehistoric DNA. While the park's mastermind, billionaire John Hammond (Richard Attenborough), assures everyone that the facility is safe, they find out otherwise when various ferocious predators break free and go on the hunt.",
+							"In Steven Spielberg's massive blockbuster, paleontologists Alan Grant (Sam Neill) and \
+                            Ellie Sattler (Laura Dern) and mathematician Ian Malcolm (Jeff Goldblum) are among \
+                            a select group chosen to tour an island theme park populated by dinosaurs created from \
+                            prehistoric DNA. While the park's mastermind, billionaire John Hammond (Richard Attenborough), \
+                            assures everyone that the facility is safe, they find out otherwise when various ferocious \
+                            predators break free and go on the hunt.",
 							"image/jura.jpg",
 							"Jeff Goldblum","Steven Spielberg","June 11, 1993 (USA)")
 Lincoln = media.Movie("Lincoln", "https://www.youtube.com/watch?v=Xb_4O9bYNbI",
 							"2h",
-							"With the nation embroiled in still another year with the high death count of Civil War, President Abraham Lincoln (Daniel Day-Lewis) brings the full measure of his passion, humanity and political skill to what would become his defining legacy: to end the war and permanently abolish slavery through the 13th Amendment. Having great courage, acumen and moral fortitude, Lincoln pushes forward to compel the nation, and those in government who oppose him, to aim toward a greater good for all mankind.",
+							"With the nation embroiled in still another year with the high death count of Civil War, \
+                            President Abraham Lincoln (Daniel Day-Lewis) brings the full measure of his passion, \
+                            humanity and political skill to what would become his defining legacy: to end the war \
+                            and permanently abolish slavery through the 13th Amendment. Having great courage, acumen \
+                            and moral fortitude, Lincoln pushes forward to compel the nation, and those in government \
+                            who oppose him, to aim toward a greater good for all mankind.",
 							"image/linc.jpg",
 							"Daniel Day-Lewis","Steven Spielberg","November 9, 2012 (USA)")
 Interstellar = media.Movie("Interstellar", "https://www.youtube.com/watch?v=0vxOhd4qlnA",
 							"2h 49m",
-							"In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by transporting Earth's population to a new home via a wormhole. But first, Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through the wormhole and across the galaxy to find out which of three planets could be mankind's new home",
+							"In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet \
+                            uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans \
+                            to save mankind by transporting Earth's population to a new home via a wormhole. But first, \
+                            Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through \
+                            the wormhole and across the galaxy to find out which of three planets could be mankind's new home",
 							"image/inte.jpg",
 							"Matthew McConaughey","Christopher Nolan","November 5, 2014 (USA)")
 Man_of_Steel = media.Movie("Man of Steel", "https://www.youtube.com/watch?v=Sqgv1Qz1at4",
 							"2h 28m",
-							"With the imminent destruction of Krypton, their home planet, Jor-El (Russell Crowe) and his wife seek to preserve their race by sending their infant son to Earth. The child's spacecraft lands at the farm of Jonathan (Kevin Costner) and Martha (Diane Lane) Kent, who name him Clark and raise him as their own son. Though his extraordinary abilities have led to the adult Clark (Henry Cavill) living on the fringe of society, he finds he must become a hero to save those he loves from a dire threat",
+							"With the imminent destruction of Krypton, their home planet, Jor-El (Russell Crowe) and his wife \
+                            seek to preserve their race by sending their infant son to Earth. The child's spacecraft lands at \
+                            the farm of Jonathan (Kevin Costner) and Martha (Diane Lane) Kent, who name him Clark and raise \
+                            him as their own son. Though his extraordinary abilities have led to the adult Clark (Henry Cavill) \
+                            living on the fringe of society, he finds he must become a hero to save those he loves from a dire threat",
 							"image/mano.jpg",
 							"Henry Cavill","hristopher Nolan","June 14, 2013 (USA)")
 The_Dark_Knight_Rises = media.Movie("The Dark Knight Rises", "https://www.youtube.com/watch?v=GokKUqLcvD8",
 							"2h 45m",
-							"It has been eight years since Batman (Christian Bale), in collusion with Commissioner Gordon (Gary Oldman), vanished into the night. Assuming responsibility for the death of Harvey Dent, Batman sacrificed everything for what he and Gordon hoped would be the greater good. However, the arrival of a cunning cat burglar (Anne Hathaway) and a merciless terrorist named Bane (Tom Hardy) force Batman out of exile and into a battle he may not be able to win",
+							"It has been eight years since Batman (Christian Bale), in collusion with Commissioner Gordon \
+                            (Gary Oldman), vanished into the night. Assuming responsibility for the death of Harvey Dent, \
+                            Batman sacrificed everything for what he and Gordon hoped would be the greater good. However, \
+                            the arrival of a cunning cat burglar (Anne Hathaway) and a merciless terrorist named Bane (Tom Hardy) \
+                            force Batman out of exile and into a battle he may not be able to win",
 							"image/thed.jpg",
 							"Tom Hardy","Chritian Bale","July 20, 2012 (USA)")
 Inception = media.Movie("Inception", "https://www.youtube.com/watch?v=8hP9D6kZseM",
 							"2h 28m",
-							"Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams and steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves. Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone's mind. If he succeeds, it will be the perfect crime, but a dangerous enemy anticipates Cobb's every move.",
+							"Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams \
+                            and steal their secrets from their subconscious. His skill has made him a hot commodity \
+                            in the world of corporate espionage but has also cost him everything he loves. Cobb gets \
+                            a chance at redemption when he is offered a seemingly impossible task: Plant an idea in \
+                            someone's mind. If he succeeds, it will be the perfect crime, but a dangerous enemy \
+                            anticipates Cobb's every move.",
 							"",
 							"Leonardo Dicarpio","Christopher Nolan","July 13, 2010 (USA)")
 Schindler_list = media.Movie("Schindler's list", "https://www.youtube.com/watch?v=JdRGC-w9syA",
 							"3h 15m",
-							"Businessman Oskar Schindler (Liam Neeson) arrives in Krakow in 1939, ready to make his fortune from World War II, which has just started. When the SS begins exterminating Jews in the Krakow ghetto, Schindler arranges to have his workers protected to keep his factory in operation, but soon realizes that in so doing, he is also saving innocent lives",
+							"Businessman Oskar Schindler (Liam Neeson) arrives in Krakow in 1939, ready to make his \
+                            fortune from World War II, which has just started. When the SS begins exterminating Jews \
+                            in the Krakow ghetto, Schindler arranges to have his workers protected to keep his factory \
+                            in operation, but soon realizes that in so doing, he is also saving innocent lives",
 							"image/schi.jpg",
 							"Liam Neeson","Steven Spielberg","December 15, 1993 (USA)")
 
-movies = [Schindler_list, Jurassic_Park, Jaws, Saving_private_Ryan, Lincoln, Interstellar, Man_of_Steel, The_Dark_Knight_Rises, Inception]
+movies = [Schindler_list, Jurassic_Park, Jaws, Saving_private_Ryan, Lincoln, Interstellar, Man_of_Steel, 
+            The_Dark_Knight_Rises, Inception]
 
 
 # Attributes of Music Object: title, trailer_youtube_url, duration, author, performer, category
@@ -123,9 +162,10 @@ Crystallize = media.Music("Crystallize", "https://www.youtube.com/watch?v=aHjpOz
 
 
 
-musics = [Batman_Evolution, Crystallize, Bad, Smooth_Criminal, Nocturne_op_72, Moonlight_Sotana, Nocturne_op_9_Number_2, 
-			Clair_de_Lune, First_Arabesque, Thriller, Happy, All_of_Me, Take_Me_To_Church, Titanium, We_Are_Young, 
-			Fantasy_in_D_minor_K397, Turkish_March, All_of_me, Waterfall, Kungfu_Piano,  Mission_Impossible, The_Misssion]
+musics = [Batman_Evolution, Crystallize, Bad, Smooth_Criminal, Nocturne_op_72, Moonlight_Sotana, 
+            Nocturne_op_9_Number_2, Clair_de_Lune, First_Arabesque, Thriller, Happy, All_of_Me, 
+            Take_Me_To_Church, Titanium, We_Are_Young, Fantasy_in_D_minor_K397, Turkish_March, 
+            All_of_me, Waterfall, Kungfu_Piano,  Mission_Impossible, The_Misssion]
 
 
 # Call the main function to make the index.html file and to open it
