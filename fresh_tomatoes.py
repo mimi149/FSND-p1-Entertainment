@@ -13,216 +13,9 @@ main_page_head = '''
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   
-    <!-- <link href="css/styles.css" rel="stylesheet" type="text/css"> -->
-    <!-- <script src="js/script.js"></script> -->
-  
-    
-<style type="text/css" media="screen">
-    body {
-        padding-top: 80px;
-        background-color:#BDF5EB;
-    }
-    #trailer .modal-dialog {
-        margin-top: 200px;
-        width: 640px;
-        height: 480px;
-    }
-    .hanging-close {
-        position: absolute;
-        top: -12px;
-        right: -12px;
-        z-index: 9001;
-    }
-    #trailer-video {
-        width: 100%;
-        height: 100%;
-    }
-    .movie-tile {
-        width: 220px;
-        height: 342px;
-    }
-    .movie-tile:hover {
-        background-color: #46DA85;
-        cursor: pointer;
-    }
-    .music-tile:hover {
-        cursor: pointer;
-    }
-
-    .scale-media {
-        padding-bottom: 56.25%;
-        position: relative;
-    }
-    .scale-media iframe {
-        border: none;
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-        background-color: white;
-    }
-
-
-    /*----- Tabs -----*/
-    .tabs {
-        width:100%;
-        display:inline-block;
-    }
-
-    /*----- Tab Links -----*/
-    /* Clearfix */
-    .tab-links:after {
-        display:block;
-        clear:both;
-        content:'';
-    }
-
-    .tab-links {
-        margin:0px 0px 0px 0px;
-        padding:0px 0px 0px 0px;
-    }
-
-    .tab-links li {
-        margin:0px 0px 0px 0px;
-        padding:0px 0px 0px 0px;
-        float:left;
-        list-style:none;
-    }
-
-    .tab-links a {
-        margin:0px 0px 0px 0px;
-        padding:10px 20px 10px 20px;
-
-        margin: 0.2px;
-        display:inline-block;
-        border-radius:10px 10px 0px 0px;
-        background:#7FB5DA;
-        font-size:16px;
-        font-weight:600;
-        color:#4c4c4c;
-        transition:all linear 0.15s;
-    }
-
-    .tab-links a:hover {
-        background:#a7cce5;
-        text-decoration:none;
-    }
-
-    li.active a, li.active a:hover {
-        background:#46DA85;
-        color:#A61C50;
-    }
-
-    /*----- Content of Tabs -----*/
-    .tab-content {
-        margin:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px;
-        height: 1600px;
-        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
-        background:#46DA85;
-    }
-
-    .tab {
-        display:none;
-    }
-
-    .tab.active {
-        display:block;
-        color: #010901
-    }
-
-    /*-----MyTooltip-----*/
-    .mytooltip {
-        position:relative;
-    }
-
-    .mytooltip .txt {
-        width:350px;
-        padding:10px 15px;
-        display:none;
-        position:absolute;
-        z-index:1000;
-        border-radius:3px;
-        background:rgba(0,0,0,0.85);
-        /* Type */
-        font-size:18px;
-        text-shadow:-1px 1px 0px rgba(0,0,0,0.2);
-        line-height:150%;
-        color:#fff;
-    }
-
-    .mytooltip.top .txt {
-        bottom:20px;
-        left:-10px;
-    }
-     
-    .mytooltip.top .txt:before {
-        bottom:-5px;
-        left:10px;
-        border-left:5px solid transparent;
-        border-right:5px solid transparent; 
-        border-top:5px solid rgba(0,0,0,0.75); 
-    }
-    .mytooltip:hover .txt { 
-        display:inline-block; 
-        placement : 'top';
-    }
-        
-    </style>
-        
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-      
-            $('[data-toggle="popover"]').popover({
-                placement : 'top'
-            });
-        });
-    </script>
-
-    <script type="text/javascript" charset="utf-8">
-        jQuery(document).ready(function() {
-        jQuery('.tabs .tab-links a').on('click', function(e)  {
-            var currentAttrValue = jQuery(this).attr('href');
-     
-            // Show/Hide Tabs
-            jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
-     
-            // 
-            jQuery('.tabs ' + currentAttrValue).children().show();
-
-            // Change/remove current tab to active
-            jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
-     
-            e.preventDefault();
-            });
-    });
-    </script>
-    
-
-    <script type="text/javascript" charset="utf-8">
-        // Pause the video when the modal is closed
-        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
-            // Remove the src so the player itself gets removed, as this is the only
-            // reliable way to ensure the video stops playing in IE
-            $("#trailer-video-container").empty();
-        });
-        // Start playing the video whenever the trailer modal is opened
-        $(document).on('click', '.movie-tile, .music-tile', function (event) {
-            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
-            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
-            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
-              'id': 'trailer-video',
-              'type': 'text-html',
-              'src': sourceUrl,
-              'frameborder': 0
-            }));
-        });
-
-    </script>
-    
-    
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/script.js"></script>
+   
 </head>
 '''
 
@@ -297,7 +90,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="{trailer_youtube_id}"
         data-toggle="modal" data-target="#trailer">
-        <img src="{poster_image_url}" style="width:220px; height:342px; margin-left:70px;">
+        <img src="{poster_image_url}" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -313,9 +106,9 @@ movie_tile_content = '''
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="{movie_title}" data-content = "{storyline}">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>

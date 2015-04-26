@@ -9,216 +9,9 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   
-    <!-- <link href="css/styles.css" rel="stylesheet" type="text/css"> -->
-    <!-- <script src="js/script.js"></script> -->
-  
-    
-<style type="text/css" media="screen">
-    body {
-        padding-top: 80px;
-        background-color:#BDF5EB;
-    }
-    #trailer .modal-dialog {
-        margin-top: 200px;
-        width: 640px;
-        height: 480px;
-    }
-    .hanging-close {
-        position: absolute;
-        top: -12px;
-        right: -12px;
-        z-index: 9001;
-    }
-    #trailer-video {
-        width: 100%;
-        height: 100%;
-    }
-    .movie-tile {
-        width: 220px;
-        height: 342px;
-    }
-    .movie-tile:hover {
-        background-color: #46DA85;
-        cursor: pointer;
-    }
-    .music-tile:hover {
-        cursor: pointer;
-    }
-
-    .scale-media {
-        padding-bottom: 56.25%;
-        position: relative;
-    }
-    .scale-media iframe {
-        border: none;
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-        background-color: white;
-    }
-
-
-    /*----- Tabs -----*/
-    .tabs {
-        width:100%;
-        display:inline-block;
-    }
-
-    /*----- Tab Links -----*/
-    /* Clearfix */
-    .tab-links:after {
-        display:block;
-        clear:both;
-        content:'';
-    }
-
-    .tab-links {
-        margin:0px 0px 0px 0px;
-        padding:0px 0px 0px 0px;
-    }
-
-    .tab-links li {
-        margin:0px 0px 0px 0px;
-        padding:0px 0px 0px 0px;
-        float:left;
-        list-style:none;
-    }
-
-    .tab-links a {
-        margin:0px 0px 0px 0px;
-        padding:10px 20px 10px 20px;
-
-        margin: 0.2px;
-        display:inline-block;
-        border-radius:10px 10px 0px 0px;
-        background:#7FB5DA;
-        font-size:16px;
-        font-weight:600;
-        color:#4c4c4c;
-        transition:all linear 0.15s;
-    }
-
-    .tab-links a:hover {
-        background:#a7cce5;
-        text-decoration:none;
-    }
-
-    li.active a, li.active a:hover {
-        background:#46DA85;
-        color:#A61C50;
-    }
-
-    /*----- Content of Tabs -----*/
-    .tab-content {
-        margin:0px 0px 0px 0px;
-        padding:10px 10px 10px 10px;
-        height: 1600px;
-        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
-        background:#46DA85;
-    }
-
-    .tab {
-        display:none;
-    }
-
-    .tab.active {
-        display:block;
-        color: #010901
-    }
-
-    /*-----MyTooltip-----*/
-    .mytooltip {
-        position:relative;
-    }
-
-    .mytooltip .txt {
-        width:350px;
-        padding:10px 15px;
-        display:none;
-        position:absolute;
-        z-index:1000;
-        border-radius:3px;
-        background:rgba(0,0,0,0.85);
-        /* Type */
-        font-size:18px;
-        text-shadow:-1px 1px 0px rgba(0,0,0,0.2);
-        line-height:150%;
-        color:#fff;
-    }
-
-    .mytooltip.top .txt {
-        bottom:20px;
-        left:-10px;
-    }
-     
-    .mytooltip.top .txt:before {
-        bottom:-5px;
-        left:10px;
-        border-left:5px solid transparent;
-        border-right:5px solid transparent; 
-        border-top:5px solid rgba(0,0,0,0.75); 
-    }
-    .mytooltip:hover .txt { 
-        display:inline-block; 
-        placement : 'top';
-    }
-        
-    </style>
-        
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-      
-            $('[data-toggle="popover"]').popover({
-                placement : 'top'
-            });
-        });
-    </script>
-
-    <script type="text/javascript" charset="utf-8">
-        jQuery(document).ready(function() {
-        jQuery('.tabs .tab-links a').on('click', function(e)  {
-            var currentAttrValue = jQuery(this).attr('href');
-     
-            // Show/Hide Tabs
-            jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
-     
-            // 
-            jQuery('.tabs ' + currentAttrValue).children().show();
-
-            // Change/remove current tab to active
-            jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
-     
-            e.preventDefault();
-            });
-    });
-    </script>
-    
-
-    <script type="text/javascript" charset="utf-8">
-        // Pause the video when the modal is closed
-        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
-            // Remove the src so the player itself gets removed, as this is the only
-            // reliable way to ensure the video stops playing in IE
-            $("#trailer-video-container").empty();
-        });
-        // Start playing the video whenever the trailer modal is opened
-        $(document).on('click', '.movie-tile, .music-tile', function (event) {
-            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
-            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
-            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
-              'id': 'trailer-video',
-              'type': 'text-html',
-              'src': sourceUrl,
-              'frameborder': 0
-            }));
-        });
-
-    </script>
-    
-    
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/script.js"></script>
+   
 </head>
 
 <!DOCTYPE html>
@@ -264,7 +57,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="JdRGC-w9syA"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/schi.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/schi.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -280,9 +73,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Schindler's list" data-content = "Businessman Oskar Schindler (Liam Neeson) arrives in Krakow in 1939, ready to make his                             fortune from World War II, which has just started. When the SS begins exterminating Jews                             in the Krakow ghetto, Schindler arranges to have his workers protected to keep his factory                             in operation, but soon realizes that in so doing, he is also saving innocent lives">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -290,7 +83,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="RxrvaneULkE"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/jura.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/jura.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -306,9 +99,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Jurassic Park" data-content = "In Steven Spielberg's massive blockbuster, paleontologists Alan Grant (Sam Neill) and                             Ellie Sattler (Laura Dern) and mathematician Ian Malcolm (Jeff Goldblum) are among                             a select group chosen to tour an island theme park populated by dinosaurs created from                             prehistoric DNA. While the park's mastermind, billionaire John Hammond (Richard Attenborough),                             assures everyone that the facility is safe, they find out otherwise when various ferocious                             predators break free and go on the hunt.">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -316,7 +109,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="3hIvvho2T1k"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/jaws.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/jaws.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -332,9 +125,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Jaws" data-content = "When a young woman is killed by a shark while skinny-dipping near the New England                             tourist town of Amity Island, police chief Martin Brody (Roy Scheider) wants to close                             the beaches, but mayor Larry Vaughn (Murray Hamilton) overrules him, fearing that the                             loss of tourist revenue will cripple the town. Ichthyologist Matt Hooper (Richard Dreyfuss)                             and grizzled ship captain Quint (Robert Shaw) offer to help Brody capture the killer beast,                             and the trio engage in an epic battle of man vs. nature.">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -342,7 +135,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="RYExstiQlLc"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/savi.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/savi.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -358,9 +151,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Saving private Ryan" data-content = "Captain John Miller (Tom Hanks) takes his men behind enemy lines to find Private James Ryan,                             whose three brothers have been killed in combat. Surrounded by the brutal realties of war,                             while searching for Ryan, each man embarks upon a personal journey and discovers their                             own strength to triumph over an uncertain future with honor, decency and courage">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -368,7 +161,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="Xb_4O9bYNbI"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/linc.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/linc.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -384,9 +177,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Lincoln" data-content = "With the nation embroiled in still another year with the high death count of Civil War,                             President Abraham Lincoln (Daniel Day-Lewis) brings the full measure of his passion,                             humanity and political skill to what would become his defining legacy: to end the war                             and permanently abolish slavery through the 13th Amendment. Having great courage, acumen                             and moral fortitude, Lincoln pushes forward to compel the nation, and those in government                             who oppose him, to aim toward a greater good for all mankind.">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -394,7 +187,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="0vxOhd4qlnA"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/inte.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/inte.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -410,9 +203,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Interstellar" data-content = "In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet                             uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans                             to save mankind by transporting Earth's population to a new home via a wormhole. But first,                             Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through                             the wormhole and across the galaxy to find out which of three planets could be mankind's new home">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -420,7 +213,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="Sqgv1Qz1at4"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/mano.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/mano.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -436,9 +229,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Man of Steel" data-content = "With the imminent destruction of Krypton, their home planet, Jor-El (Russell Crowe) and his wife                             seek to preserve their race by sending their infant son to Earth. The child's spacecraft lands at                             the farm of Jonathan (Kevin Costner) and Martha (Diane Lane) Kent, who name him Clark and raise                             him as their own son. Though his extraordinary abilities have led to the adult Clark (Henry Cavill)                             living on the fringe of society, he finds he must become a hero to save those he loves from a dire threat">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -446,7 +239,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="GokKUqLcvD8"
         data-toggle="modal" data-target="#trailer">
-        <img src="image/thed.jpg" style="width:220px; height:342px; margin-left:70px;">
+        <img src="image/thed.jpg" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -462,9 +255,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="The Dark Knight Rises" data-content = "It has been eight years since Batman (Christian Bale), in collusion with Commissioner Gordon                             (Gary Oldman), vanished into the night. Assuming responsibility for the death of Harvey Dent,                             Batman sacrificed everything for what he and Gordon hoped would be the greater good. However,                             the arrival of a cunning cat burglar (Anne Hathaway) and a merciless terrorist named Bane (Tom Hardy)                             force Batman out of exile and into a battle he may not be able to win">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
@@ -472,7 +265,7 @@
 <div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
     <div class="movie-tile" data-trailer-youtube-id="8hP9D6kZseM"
         data-toggle="modal" data-target="#trailer">
-        <img src="" style="width:220px; height:342px; margin-left:70px;">
+        <img src="" style="width:220px; height:342px">
     </div>
     <div>
         <mytip class="mytooltip top" href="#">
@@ -488,9 +281,9 @@
     </div>
     <div class="row"></div>
     <div>
-        <a href="#"  data-toggle = "popover" data-trigger="focus"
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
             title="Inception" data-content = "Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams                             and steal their secrets from their subconscious. His skill has made him a hot commodity                             in the world of corporate espionage but has also cost him everything he loves. Cobb gets                             a chance at redemption when he is offered a seemingly impossible task: Plant an idea in                             someone's mind. If he succeeds, it will be the perfect crime, but a dangerous enemy                             anticipates Cobb's every move.">
-            Movie Story 
+            Story Line 
         </a>
     </div>
 </div>
