@@ -76,7 +76,7 @@ Inception = media.Movie("Inception", "https://www.youtube.com/watch?v=8hP9D6kZse
                             a chance at redemption when he is offered a seemingly impossible task: Plant an idea in \
                             someone's mind. If he succeeds, it will be the perfect crime, but a dangerous enemy \
                             anticipates Cobb's every move.",
-							"",
+							"image/ince.jpg",
 							"Leonardo Dicarpio","Christopher Nolan","July 13, 2010 (USA)")
 Schindler_list = media.Movie("Schindler's list", "https://www.youtube.com/watch?v=JdRGC-w9syA",
 							"3h 15m",
@@ -94,25 +94,25 @@ movies = [Schindler_list, Jurassic_Park, Jaws, Saving_private_Ryan, Lincoln, Int
 # Attributes of Music Object: title, trailer_youtube_url, duration, author, performer, category
 
 Nocturne_op_72 = media.Music("Nocturne op.72", "https://www.youtube.com/watch?v=vJpAIOFN5WQ",
-								"4:44", "Fryderyk Chopin", "Artur Rubinstein", "instrumental")
+								"4:44", "Fryderyk Chopin", "Artur Rubinstein", "classical")
 
 Moonlight_Sotana = media.Music("Moonlight Sonata (full)", "https://www.youtube.com/watch?v=4Tr0otuiQuU",
-								"15:00", "Ludwig van Bethoven", "Andrea Romano", "instrumental")
+								"15:00", "Ludwig van Bethoven", "Andrea Romano", "classical")
 
 Nocturne_op_9_Number_2 = media.Music("Nocturne op.9 Number 2", "https://www.youtube.com/watch?v=9E6b3swbnWg",
-								"4:29", "Fryderyk Chopin", "Andrea Romano", "instrumental")
+								"4:29", "Fryderyk Chopin", "Andrea Romano", "classical")
 
 Clair_de_Lune = media.Music("Clair de Lune", "https://www.youtube.com/watch?v=CvFH_6DNRCY",
-								"5:00", "Claude Debussy", "Moura Lympany", "instrumental")
+								"5:00", "Claude Debussy", "Moura Lympany", "classical")
 
 First_Arabesque = media.Music("First Arabesque", "https://www.youtube.com/watch?v=A6s49OKp6aE",
-								"5:00", "Claude Debussy", "Stephen Malinowski", "instrumental")
+								"5:00", "Claude Debussy", "Stephen Malinowski", "classical")
 
 Fantasy_in_D_minor_K397 = media.Music("Fantasy in D minor K397", "https://www.youtube.com/watch?v=OYiz_u0tDwM",
-								"7:18", "Wolfgang Amadeus Mozart", "Mitsuko Uchida", "instrumental")
+								"7:18", "Wolfgang Amadeus Mozart", "Mitsuko Uchida", "classical")
 
 Turkish_March = media.Music("Turkish March", "https://www.youtube.com/watch?v=HMjQygwPI1c",
-								"4:00", "Wolfgang Amadeus Mozart", "Ronald Brautigam", "instrumental")
+								"4:00", "Wolfgang Amadeus Mozart", "Ronald Brautigam", "classical")
 
 Bad = media.Music("Bad", "https://www.youtube.com/watch?v=dsUXAEzaC3Q",
 								"", "Michael Jackson", "Michael Jackson", "pop")
@@ -139,30 +139,39 @@ We_Are_Young = media.Music("We Are Young", "https://www.youtube.com/watch?v=Sv6d
 								"", "Janelle Monae", "Janelle Monae", "pop")
 
 All_of_me = media.Music("All of me", "https://www.youtube.com/watch?v=9fAZIQ-vpdw",
-						"3:00", "Jon Schimdt","Jon Schimdt", "classical crossover")
+						"3:00", "","Jon Schimdt", "classical crossover")
 
 Waterfall = media.Music("Waterfall", "https://www.youtube.com/watch?v=8P9hAN-teOU", 
-						"3:30", "Jon Schimdt", "Jon Schimdt", "classical crossover")
+						"3:30", "", "Jon Schimdt", "classical crossover")
 
 Kungfu_Piano = media.Music("Kungfu Piano", "https://www.youtube.com/watch?v=NCaH-qqTWpk", 
-						"4:25", "The Piano Guys", "The Piano Guys","classical crossover")
+						"4:25", "", "The Piano Guys","classical crossover")
 
 Batman_Evolution = media.Music("Batman Evolution", "https://www.youtube.com/watch?v=skVo8AYWRYk", 
-								"6:20", "The Piano Guys", "The Piano Guys", "classical crossover")
+								"6:20", "", "The Piano Guys", "classical crossover")
 
 Mission_Impossible = media.Music("Mission Impossible", "https://www.youtube.com/watch?v=9p0BqUcQ7i0", 
-								"5:20", "The Piano Guys/Lindsey Stirling", "The Piano Guys/Lindsey Stirling", 
+								"5:20", "", "The Piano Guys/Lindsey Stirling", 
 								"classical crossover")
 
 The_Misssion = media.Music("The Misssion", "https://www.youtube.com/watch?v=CHV6BjuQOZQ", 
-							"3:50", "The Piano Guys", "The Piano Guys", "classical crossover")
+							"3:50", "", "The Piano Guys", "classical crossover")
 
 Crystallize = media.Music("Crystallize", "https://www.youtube.com/watch?v=aHjpOzsQ9YI", 
-							"5:00", "Lindsey Stirling","Lindsey Stirling", "classical crossover")
+							"5:00", "","Lindsey Stirling", "classical crossover")
+
+Dancing_Queen = media.Music("Dancing Queen", "https://www.youtube.com/watch?v=y62OlGvC-bk",
+								"3:51", "ABBA", "ABBA", "pop")
+
+The_winner_takes_it_all = media.Music("The winner takes it all", "https://www.youtube.com/watch?v=0sryOCnuj7c",
+								"4:58", "ABBA", "ABBA", "pop")
+Happy_new_year = media.Music("Happy new year", "https://www.youtube.com/watch?v=Km6i04BeCKs",
+								"4:27", "ABBA", "ABBA", "pop")
+Knowing_me_knowing_you = media.Music("Knowing me , knowing you", "https://www.youtube.com/watch?v=hlP1lBkviqk",
+								"3:58", "ABBA", "ABBA", "pop")
 
 
-
-musics = [Batman_Evolution, Crystallize, Bad, Smooth_Criminal, Nocturne_op_72, Moonlight_Sotana, 
+musics = [Knowing_me_knowing_you, Happy_new_year, The_winner_takes_it_all, Dancing_Queen, Batman_Evolution, Crystallize, Bad, Smooth_Criminal, Nocturne_op_72, Moonlight_Sotana, 
             Nocturne_op_9_Number_2, Clair_de_Lune, First_Arabesque, Thriller, Happy, All_of_Me, 
             Take_Me_To_Church, Titanium, We_Are_Young, Fantasy_in_D_minor_K397, Turkish_March, 
             All_of_me, Waterfall, Kungfu_Piano,  Mission_Impossible, The_Misssion]

@@ -1,3 +1,4 @@
+// Function for the popover option for the story line of the movie.
 $(document).ready(function(){
 
     $('[data-toggle="popover"]').popover({
@@ -5,6 +6,7 @@ $(document).ready(function(){
     });
 });
 
+// Function for the tab option switching between different categories of music and movie.
 jQuery(document).ready(function() {
 jQuery('.tabs .tab-links a').on('click', function(e)  {
     var currentAttrValue = jQuery(this).attr('href');

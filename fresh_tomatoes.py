@@ -56,13 +56,13 @@ main_page_content = '''
 </html>
 '''
 
-# The main page UI with tabs
+# The main page UI with 4 tabs
 
 entertain_tabs = '''
 <div class="tabs">
     <ul class="tab-links">
         <li class="active"><a href="#tab1">Movies</a></li>
-        <li><a href="#tab2">Instrumental Music</a></li>
+        <li><a href="#tab2">classical Music</a></li>
         <li><a href="#tab3">Classical Crossover Music</a></li>
         <li><a href="#tab4">Pop Music</a></li>
     </ul>
@@ -72,7 +72,7 @@ entertain_tabs = '''
             <p>{movie_content}</p>
         </div>
         <div id="tab2" class="tab">
-            <p>{instrumental_music_content}</p>
+            <p>{classical_music_content}</p>
         </div>
         <div id="tab3" class="tab">
             <p>{classical_crossover_music_content}</p>
@@ -148,14 +148,14 @@ music_table = '''
 
 different_sorting_ways = '''
 <div class="bs-example">
-    <div class="panel-group" id="accordion">
+    <div class="panel-group" id="accordion{tab_number}">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><em>Sort by title</em></a>
+                    <a data-toggle="collapse" data-parent="#accordion{tab_number}" href="#collapseOne{tab_number}"><em>Sort by title</em></a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div id="collapseOne{tab_number}" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <p>
                         {title_sort}
@@ -166,10 +166,10 @@ different_sorting_ways = '''
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><em>Sort by author</em></a>
+                    <a data-toggle="collapse" data-parent="#accordion{tab_number}" href="#collapseTwo{tab_number}"><em>Sort by author</em></a>
                 </h4>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
+            <div id="collapseTwo{tab_number}" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>
                         {author_sort}
@@ -180,10 +180,10 @@ different_sorting_ways = '''
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><em>Sort by performer</em></a>
+                    <a data-toggle="collapse" data-parent="#accordion{tab_number}" href="#collapseThree{tab_number}"><em>Sort by performer</em></a>
                 </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseThree{tab_number}" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>
                         {performer_sort}
@@ -195,7 +195,7 @@ different_sorting_ways = '''
 </div>
 
 '''
-# Three functions help sort by music title, author, performer
+# Three functions help sort by music title, author, performer:
 
 def getKeyTitle(music):
         return music.title
@@ -229,7 +229,7 @@ def create_movie_tiles_content(movies):
         )
     return content
 
-def create_music_tiles_content(m_list):
+def create_music_content(m_list):
     # The HTML content for this section of the page
     music_rows = ''
     for music in m_list:
@@ -251,45 +251,49 @@ def create_music_tiles_content(m_list):
     return content
 
 def select_music(musics, category):
+    # select music by category
     m_list = []
     for music in musics:
         if music.category == category:
             m_list.append(music)
     return m_list
 
+
+def music_tab(musics, category, tab_number):
+    # There are 3 way of sorting the music list on a music tab: by title, by author, and by performer.
+    music_list = select_music(musics, category)
+    
+    title_sorted_musics = sorted(music_list, key = getKeyTitle)
+    title_sort_table = create_music_content(title_sorted_musics)
+
+    author_sorted_musics = sorted(music_list, key = getKeyAuthor)
+    author_sort_table = create_music_content(author_sorted_musics)
+
+    performer_sorted_musics = sorted(music_list, key = getKeyPerformer)
+    performer_sort_table = create_music_content(performer_sorted_musics)
+
+    return different_sorting_ways.format(title_sort = title_sort_table,
+                            author_sort = author_sort_table,
+                            performer_sort = performer_sort_table,
+                            tab_number = tab_number)
+
+
 def open_movies_page(movies, musics):
 
-    # Replace the placeholder for the movie and music tiles with the actual dynamically generated content
+    # Replace the placeholder for the movie and music tiles with the actual dynamically generated content.
 
     movie_tiles = create_movie_tiles_content(movies)
     
-    music_list = select_music(musics, "classical crossover")
-    classical_crossover_music_tiles = create_music_tiles_content(music_list)
+    classical_music_tiles =  music_tab(musics, "classical", "1")
+    classical_crossover_music_tiles = music_tab(musics, "classical crossover", "2")
+    pop_music_tiles = music_tab(musics, "pop", "3")
     
-    music_list = select_music(musics, "pop")
-    pop_music_tiles = create_music_tiles_content(music_list)
-    
-    music_list = select_music(musics, "instrumental")
-    
-    title_sorted_musics = sorted(music_list, key = getKeyTitle)
-    title_sort_table = create_music_tiles_content(title_sorted_musics)
-
-    author_sorted_musics = sorted(music_list, key = getKeyAuthor)
-    author_sort_table = create_music_tiles_content(author_sorted_musics)
-
-    performer_sorted_musics = sorted(music_list, key = getKeyPerformer)
-    performer_sort_table = create_music_tiles_content(performer_sorted_musics)
-
-
-    classical_music_tiles = different_sorting_ways.format(title_sort = title_sort_table,
-                            author_sort = author_sort_table,
-                            performer_sort = performer_sort_table)
-    
-
+    # Fill 4 tabs for the mainpage.
     entertain = entertain_tabs.format(movie_content = movie_tiles,
-                            instrumental_music_content = classical_music_tiles,
+                            classical_music_content = classical_music_tiles,
                             classical_crossover_music_content = classical_crossover_music_tiles,
                             pop_music_content = pop_music_tiles)
+
 
     rendered_content = main_page_content.format(tab = entertain)
 

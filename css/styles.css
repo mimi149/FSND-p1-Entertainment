@@ -18,7 +18,10 @@ body {
     height: 100%;
 }
 .movie-tile {
+    width: 220px;
     height: 342px;
+    margin-left: auto; 
+    margin-right: auto; 
 }
 .movie-tile:hover {
     background-color: #46DA85;
