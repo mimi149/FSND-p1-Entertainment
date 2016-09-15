@@ -5,12 +5,12 @@ import re
 main_page_head = '''
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>Entertainment</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   
     <link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -39,16 +39,6 @@ main_page_content = '''
     </div>
     
     <!-- Main Page Content -->
-    
-    <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Entertainment</a>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container" stype="backgroud-color: #A0A193">
         {tab}
     </div>
